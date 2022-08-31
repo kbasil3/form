@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="stylesheet" href="other.css">
+
+
+    <title>Sign Up!</title>
+</head>
+<body>
+    
+    <div class="column left">
+        <div id="footer">Photo by Joseph Pearson</div>
+        <div id="overlay">
+        <img src="image/statenisland.png" class="small" alt="statenisland">
+        </div>
+    </div>
+
+<div id="zero"> 
+
+
+        <section id="box">
+            <img src="image/statenisland-form2.png" class="SI" alt="statenisland2">
+        <!--<h2 id="heading"> Join the Staten Island Ferry. Voted the number #1 place to cry in NYC!</h2>
+        <h3 id="heading2">Come cry with us!</h3>-->
+        </section>
+
+
+    
+<section id="box2">
+
+    <legend id="heading3">Join here! Come cry with us! Joining isn't real but the crying is!</legend>
+    
+        
+    <form action="index.html"
+            method="post"
+            id="boxes">
+
+
+    <div class=wrapper>
+
+                <div id="first-Name">
+                    <label for="first-Name">First Name:</label>
+                    <input type="first-Name" id="first-Name" name="first-Name"
+                    required>
+                
+                </div>
+
+                <div id="last-Name">
+                    <label for="last-Name">Last Name:</label>
+                    <input type="last-Name" id="last-Name" name="last-Name"
+                    required>
+                
+                </div>
+
+                <div id="user-email">
+                    <label for="user-email">Email Address:</label>
+                    <input type="email" id="user-email" name="user-email" 
+                    pattern=".+@gmail\.com" required >
+                
+                </div>
+
+                    <div id="phone-number">
+                    <label for="phone-number">Phone Number:</label>
+                    <input type="phone-number" id="phone-number" name="phone-number"
+                    minlength="10" required>
+                    
+                
+                </div>
+
+                <div id="user-password">
+                    <label for="user-password">Password:</label>
+                    <input type="password" id="user-password" name="user-password" required>
+                
+                </div>
+
+                    <div id="password">
+                    <label for="password">Confirm Password:</label>
+                    <input type="password" id="password" name="password" required>
+                
+                </div>
+
+             
+                    
+                <input type="button" name="button" value="Ready to Cry?" class="large">
+               
+    </div>
+    </form>
+         
+      
+</section>
+
+    <!--END-->
+        <section class="end">
+           
+
+            <h2 class="end-heading"> Already a ferry creature? <a id="myLink" href="#" >Sign in!</a></h2>
+        </section>
+   
+ 
+
+</div>   
+  
+
+    <script>
+        window.onload = function () {
+  var form = document.getElementById('boxes');
+  form.button.onclick = function (){
+    for(var i=0; i < form.elements.length; i++){
+      if(form.elements[i].value === '' && form.elements[i].hasAttribute('required')){
+        alert('There are some required fields!');
+        return false;
+      }
+    }
+    form.submit();
+  }; 
+};
+    </script>
+</body>
+</html>
